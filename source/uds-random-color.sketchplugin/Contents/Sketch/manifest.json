@@ -1,0 +1,24 @@
+{
+  "version" : "1.0",
+  "name": "UDS Color Randomization",
+  "description": "Plugin to create blends",
+  "identifier" : "com.example.sketch.uds-color-randomization",
+  "author" : "Kristen Zirkler",
+  "authorEmail" : "kristen@althouse.co",
+  "compatibleVersion": "65",
+  "commands" : [
+    {
+      "name" : "Randomize Grays",
+      "identifier" : "randomize-grays",
+      "shortcut": "cmd alt shift g",
+      "script" : "uds-randomize-grays.js",
+      "handler" : "randomizeGrays"
+    }
+  ],
+  "menu" : {
+    "title" : "UDS Color Randomization",
+    "items" : [
+      "randomize-grays"
+    ]
+  },
+}
