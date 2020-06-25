@@ -17,13 +17,11 @@ if (selectedCount === 0) {
 }
 
 // Define color palette
-var color1 = "#E6E7E9"
-var color2 = "#C4C4C4"
-var color3 = "#969696"
-var color4 = "#7C7C7C"
-var color5 = "#626262"
-var colorCount = 5
-var colors = [color1,color2,color3,color4,color5]
+var color1 = "#ccc"
+var color2 = "#999"
+var color3 = "#666"
+var colorCount = 3
+var colors = [color1,color2,color3]
 //console.log(colors);
 
 // Select a random number
@@ -36,11 +34,12 @@ function getRandomIntInclusive(min, max) {
 selection.forEach(function (layer, i) {
 
   // Get a random color to fill layer style
-  var r = getRandomIntInclusive(1,5)
+  var r = getRandomIntInclusive(0,colorCount)
+  //console.log(r);
 
   // Avoid repeat colors
   while (lastColor == r) {
-    var r = Math.floor(Math.random()*5)
+    var r = Math.floor(Math.random()*colorCount)
   }
   // Fill the color
   layer.style.fills = [
